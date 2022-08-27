@@ -1,0 +1,82 @@
+.slider-content {
+  position: absolute;
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+    width: 320px;
+    height: 320px;
+    top: 228px;
+    right: 32px;
+  }
+  @media screen and (min-width: $desktop) {
+    position: relative;
+    width: 580px;
+    height: 580px;
+    top: 0;
+    right: 18px;
+  }
+}
+
+.swiper__border {
+  border: 14px solid $yellow;
+  border-radius: 50%;
+  @media screen and (min-width: $desktop) {
+    border: 28px solid $yellow;
+  }
+}
+
+.swiper__btn {
+  position: absolute;
+  padding-top: 5px;
+  width: 34px;
+  height: 28px;
+  background: #fefefe;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  color: $black;
+  z-index: 10;
+  transition: color $time-cubic, box-shadow $time-cubic;
+
+  @media screen and (min-width: $desktop) {
+    border-radius: 4px;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $green-dark;
+  }
+
+  &:active {
+    color: $black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+  }
+
+  .swiper__icon {
+    fill: currentColor;
+    width: 48px;
+    height: 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 48px;
+    height: 40px;
+  }
+}
+
+.swiper__btn--left {
+  left: -20px;
+  @media screen and (min-width: $desktop) {
+    left: -38px;
+  }
+}
+
+.swiper__btn--right {
+  right: -20px;
+  @media screen and (min-width: $desktop) {
+    right: -38px;
+  }
+}

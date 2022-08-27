@@ -1,0 +1,50 @@
+// Fonts
+$main-font: 'Roboto', sans-serif;
+
+// Text color
+
+$yellow: #ffe550; 
+$black: #2c2c2c;
+$black-nav: #000000;
+$green-btn: #bbf330;
+$green-btn-hover: #b5ff00;
+$green-dark: #7eb101;
+$white: #ffffff;
+$grey-placeholder: #505050;
+$peach-input: #ff705d;
+
+// Background color
+
+$white-background: #fefefe;
+
+// Border color
+
+$border-hover: #597d00;
+$border-section: #d9d9d9;
+$border-ellipse: rgba(255, 255, 255, 0.5);
+
+// Shadows
+
+$shadow-inner: inset 0px -4px 6px rgba(141, 175, 56, 0.9),
+  inset 0px 4px 6px rgba(141, 175, 56, 0.91);
+$shadow-footer: 0px -4px 24px rgba(105, 105, 105, 0.1);
+
+$shadow-fruit: radial-gradient(
+  50% 50% at 50% 50%,
+  #2f583f 0%,
+  rgba(105, 105, 105, 0) 100%
+);
+
+// Flex-basis
+
+$indent: 30px;
+$elements: 3;
+
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1280px;
+
+// Time-cubic
+
+$time-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);

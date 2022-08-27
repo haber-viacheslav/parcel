@@ -1,0 +1,65 @@
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+%link {
+  text-decoration: none;
+  font-family: inherit;
+}
+
+%list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+%title {
+  margin-bottom: 20px;
+
+  font-size: 28px;
+  line-height: 1.2;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 42px;
+  }
+}
+
+%paragraph {
+  font-size: 14px;
+  line-height: calc(16 / 14);
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+%nav-list {
+  display: flex;
+  gap: 28px;
+}
+
+%nav-link {
+  @extend %link;
+  line-height: calc(16 / 14);
+  color: $black-nav;
+
+  @media screen and (min-width: $desktop) {
+    color: $black;
+  }
+
+  &:hover,
+  &:focus {
+    color: $green-btn;
+    text-decoration: underline;
+  }
+}

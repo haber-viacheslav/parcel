@@ -1,0 +1,87 @@
+.custumer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-image: url(../images/customers/bg@1x_sm.png);
+  background-position: center;
+  background-size: 320px 769px;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  height: auto;
+
+  &__title {
+    @extend %title;
+
+    margin-bottom: 20px;
+  }
+
+  &__about {
+    @extend %paragraph;
+    margin-bottom: 32px;
+  }
+  &__list {
+    @extend %list;
+    padding: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 280px;
+    height: auto;
+
+    border-radius: 0 15px 15px 15px;
+    background-color: #ffffff;
+  }
+  &__feedback {
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.19em;
+
+    color: $black;
+  }
+  &__names {
+    // position: relative;
+    display: flex;
+
+    align-items: center;
+  }
+
+  &__list--up {
+    margin-bottom: 24px;
+  }
+  &__name {
+    display: inline;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5em;
+
+    color: $black;
+  }
+
+  &__nick {
+    display: inline;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5em;
+
+    color: $black;
+  }
+  &__text {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+  }
+  &__text-box {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 16px;
+    border-right: 1px solid $green-dark;
+  }
+}
+
+.stars-icon {
+  margin-bottom: 28px;
+}

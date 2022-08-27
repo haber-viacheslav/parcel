@@ -1,2 +1,16 @@
-@import './common';
-// @import './example';
+@import './base/common';
+@import './utils/variables';
+@import './utils/mixins';
+@import './base/reset';
+@import './base/placeholders';
+@import './base/wrappers';
+@import './layout/header';
+@import './layout/hero';
+@import './layout/offerings';
+@import './layout/favorites';
+@import './layout/customers.scss';
+@import './layout/subscribe.scss';
+@import './layout/footer';
+@import './layout/mobile-menu';
+@import './components/buttons';
+@import './components/swiper';

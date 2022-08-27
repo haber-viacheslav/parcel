@@ -1,0 +1,141 @@
+.subscribe__container {
+  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin-top: 0px;   
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $tablet) {
+        justify-content: end;
+        margin-top: 20px;
+        margin-bottom: 100px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row-reverse;
+        flex-wrap: inherit;
+        margin-top: 0;
+        margin-bottom: 35px;
+        padding-right: 18px;
+        max-width: 100%;
+        gap: 38px;
+    }
+
+}
+
+.subscribe-img{
+    text-align: -webkit-center;
+    margin-bottom: 17px;
+     
+    @media screen and (min-width:$tablet) {
+        margin-bottom: 20px;
+        text-align: -webkit-right;}
+    
+    @media screen and (min-width: $desktop) {
+       margin-bottom: 0px; }
+}
+
+.subscribtion__title{
+    @extend %title;
+}
+.subscribtion__text{
+    @extend %paragraph;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    
+    @media screen and (min-width: $tablet) {
+    margin-bottom: 24px;
+    }
+}
+.subscribtion-form {
+    display: block;
+    text-align: end;
+           
+    @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: flex-start;
+    }
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
+.subscribtion-form__input {
+    width: 100%;
+    height: 42px;
+    border-radius: 30px;
+    color: $black;
+    padding: 12px 12px;
+    border: 0.854167px solid $yellow;  
+    outline: transparent; 
+    
+    &:invalid:not(:placeholder-shown) {
+    border: 0.854167px solid $peach-input;
+    } 
+    &:valid:not(:placeholder-shown) {
+    border: 0.854167px solid $green-dark;
+    }
+          
+    @media screen and (min-width: $tablet) {
+        width: 394px;}
+
+       
+    &::placeholder {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: calc(18/12);
+        color: $grey-placeholder;
+        letter-spacing: 0.03em;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+}
+.subscribtion-form__input:invalid:not(:placeholder-shown) ~ .subscribtion-form__title{
+    opacity: 1;
+}
+.subscribtion-form__title {
+    display: none;
+    width: 100%;
+    margin-top: 4px;
+
+    @media screen and (min-width: $tablet) {
+        display: block;
+        text-align: initial;
+        opacity: 0;
+                    
+    }
+}
+
+.subscribtion-form__text-error{
+    text-align: left;
+    font-size: 10px;
+    line-height: calc(15/10);
+    margin-left: 4px;
+    margin-top: 4px;
+    color: $peach-input;
+    
+}
+
+.subscribtion-form__icon{
+    text-align: center;
+}
+
+.subscribtion-form__btn{
+    margin-top: 20px;
+    @media screen and (min-width: $tablet) {
+    margin-top: 0px;
+    margin-left: 18px;}
+    @media screen and (min-width: $desktop) {
+    margin-left: 32px;
+    margin-bottom: 0px;
+}
+}

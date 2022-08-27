@@ -1,0 +1,51 @@
+.hero {
+  position: relative;
+  padding-top: 132px;
+  padding-bottom: 50px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 86px;
+  }
+}
+
+.hero__wrp {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.hero__title {
+  @extend %title;
+  margin-bottom: 28px;
+  min-width: 280px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 44px;
+    width: 537px;
+  }
+  @media screen and (min-width: $desktop) {
+    min-width: 465px;
+    margin-bottom: 28px;
+  }
+}
+
+.hero__descr {
+  @extend %paragraph;
+  width: 285px;
+  margin-bottom: 28px;
+  padding-right: 14px;
+
+  @media screen and (min-width: $tablet) {
+    width: 350px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 502px;
+  }
+}
+
+.food__photo {
+  user-select: none;
+}
