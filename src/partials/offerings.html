@@ -1,5 +1,4 @@
-<section class="section offerings">
-  <div class="offerings__overlay"></div>
+<section class="section offerings" id="offerings">
   <div class="container">
     <!--offerings main container -->
     <div class="offerings__main-container">
@@ -154,13 +153,25 @@
         </ul>
         <!-- offerings bottom part -->
         <div class="offerings__bottom-part">
-          <button class="offerings__btn btn">Order Now</button>
-          <a href="" class="offerings__link-bottom">
-            Read More
-            <svg class="offerings__link-svg">
+          <button class="btn offerings__btn">Order Now</button>
+          <!-- read more -->
+          <input
+            class="offerings__input"
+            type="checkbox"
+            id="offerings__input"
+          />
+          <label class="offerings__button" for="offerings__input"
+            >Read
+            <span class="offerings__button-uncheck">&nbsp;More</span>
+            <span class="offerings__button-check">&nbsp;Less</span>
+            <svg class="offerings__link-svg" width="14" height="14">
               <use href="./images/icons.svg#click-right"></use>
             </svg>
-          </a>
+          </label>
+
+          <p class="offerings__text-opacity">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
         </div>
       </div>
     </div>

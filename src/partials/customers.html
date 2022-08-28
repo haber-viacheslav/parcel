@@ -1,58 +1,65 @@
-<section class="custumer">
+<section class="custumer" id="custumer">
   <div class="container">
-    <div class="custumer__text">
-      <h1 class="custumer__title">What our Customers Say</h1>
-      <p class="custumer__about">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
-    </div>
+    <h1 class="custumer__title">What our Customers Say</h1>
+    <p class="custumer__about">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </p>
 
-    <ul class="custumer__list custumer__list--up">
-      <li class="custumer__link">
+    <ul class="custumer__list">
+      <li class="custumer__link custumer__link--up">
         <svg class="stars-icon" width="100" height="16">
           <use href="./images/icons.svg#stars"></use>
         </svg>
-      </li>
-      <li class="custumer__link">
         <p class="custumer__feedback">
           “The Best app I have used to order food in a while, so many options to
           choose from too, I would recommend to a freind, No questions asked”
         </p>
-      </li>
-      <li class="custumer__link">
         <div class="custumer__names">
-          <img
-            class="custumer__photo"
-            src="./images/customers/customer-1@1x.png"
-            alt="custumer photo"
-          />
+          <picture>
+            <source
+              srcset="
+                ./images/customers/customer-1@1x.png 1x,
+                ./images/customers/customer-1@2x.png 2x
+              "
+              type="image/png"
+            />
+            <img
+              class="custumer__photo"
+              src="./images/customers/customer-1@1x.png"
+              alt="custumer photo"
+            />
+          </picture>
+
           <div class="custumer__text-box">
             <p class="custumer__name">Sumith Shah</p>
             <p class="custumer__nick">Sumith Shah</p>
           </div>
         </div>
       </li>
-    </ul>
-
-    <ul class="custumer__list custumer__list--down">
-      <li class="custumer__link">
+      <li class="custumer__link custumer__link--down">
         <svg class="stars-icon" width="100" height="16">
           <use href="./images/icons.svg#stars"></use>
         </svg>
-      </li>
-      <li class="custumer__link">
         <p class="custumer__feedback">
           “The Best app I have used to order food in a while, so many options to
           choose from too, I would recommend to a freind, No questions asked”
         </p>
-      </li>
-      <li class="custumer__link">
         <div class="custumer__names">
-          <img
-            class="custumer__photo"
-            src="./images/customers/customer-2@1x.png"
-            alt="custumer photo"
-          />
+          <picture>
+            <source
+              srcset="
+                ./images/customers/customer-2@1x.png 1x,
+                ./images/customers/customer-2@2x.png 2x
+              "
+              type="image/png"
+            />
+            <img
+              class="custumer__photo"
+              src="./images/customers/customer-2@1x.png"
+              alt="custumer photo"
+            />
+          </picture>
+
           <div class="custumer__text-box">
             <p class="custumer__name">Sumith Shah</p>
             <p class="custumer__nick">Sumith Shah</p>

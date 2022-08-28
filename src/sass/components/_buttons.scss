@@ -51,15 +51,26 @@
 }
 
 .footer__btn {
-  font-size: 13.6667px;
+  min-width: 103px;
+  font-size: 13px;
+  line-height: 1.5;
   padding: 10px 17px;
-  min-width: 102px;
   background-color: $white-background;
   border: 0.854167px solid $green-dark;
+  border-radius: 30px;
   transition: background-color $time-cubic;
 
   &:hover,
   &:focus {
     background-color: $yellow;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $tablet) {
+    align-self: flex-start;
   }
 }

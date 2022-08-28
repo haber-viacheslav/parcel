@@ -1,37 +1,106 @@
 .custumer {
+  max-width: $desktop;
+  margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-left: auto;
-  margin-right: auto;
   display: block;
-  background-image: url(../images/customers/bg@1x_sm.png);
   background-position: center;
-  background-size: 320px 769px;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  min-width: 100%;
-  height: auto;
+  background-image: url(../images/customers/bg@1x_sm.png);
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url(../images/customers/bg@2x_sm.png);
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: url(../images/customers/bg@1x_md.png);
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/customers/bg@2x_md.png);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: url(../images/customers/bg@1x_lg.png);
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/customers/bg@2x_lg.png);
+    }
+  }
 
   &__title {
     @extend %title;
-
     margin-bottom: 20px;
+
+    @media screen and (min-width: $tablet) {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 1.17em;
+    }
   }
 
   &__about {
     @extend %paragraph;
     margin-bottom: 32px;
+
+    @media screen and (min-width: $tablet) {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.19;
+    }
   }
+
   &__list {
     @extend %list;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 140px;
+    }
+  }
+
+  &__link {
     padding: 8px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 280px;
+
+    max-width: 100%;
     height: auto;
 
     border-radius: 0 15px 15px 15px;
     background-color: #ffffff;
   }
+
+  &__link--up {
+    margin-bottom: 24px;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0;
+      margin-right: 32px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: 139px;
+    }
+  }
+
+  &__link--down {
+    @media screen and (min-width: $desktop) {
+      margin-right: 123px;
+    }
+  }
+
   &__feedback {
     margin-bottom: 40px;
     font-weight: 700;
@@ -39,7 +108,13 @@
     line-height: 1.19em;
 
     color: $black;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 18px;
+      line-height: 1.17em;
+    }
   }
+
   &__names {
     // position: relative;
     display: flex;
@@ -47,9 +122,6 @@
     align-items: center;
   }
 
-  &__list--up {
-    margin-bottom: 24px;
-  }
   &__name {
     display: inline;
     font-weight: 500;
@@ -67,12 +139,7 @@
 
     color: $black;
   }
-  &__text {
-    max-width: 280px;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-  }
+
   &__text-box {
     margin-left: 16px;
     display: flex;

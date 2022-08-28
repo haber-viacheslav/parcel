@@ -1,34 +1,25 @@
 .offerings {
-  position: relative;
-  z-index: 2;
-  //   @media screen and (min-width: $tablet) {
-  //     padding: 0 0 100px 0;
-  //   }
-}
-
-.offerings__overlay {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -24%);
-  width: 1280px;
-  height: 856px;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 0;
+  margin: 0 auto;
+  margin-top: 420px;
+  padding-top: 41px;
+  padding-bottom: 60px;
   background-image: url(../images/offerings/bg@1x_sm.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: url(../images/offerings/bg@2x_sm.png);
   }
+
   @media screen and (min-width: $tablet) {
-    width: 100vw;
-    height: 768px;
+    max-width: $tablet;
+    margin-top: 450px;
+    padding: 0 0 100px 0;
     background-image: url(../images/offerings/bg@1x_md.png);
     background-repeat: no-repeat;
+
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
@@ -37,13 +28,12 @@
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    // margin-top: 40px;
+    max-width: $desktop;
+    margin-top: 500px;
     padding: 171px 0 75px 0;
     background-image: url(../images/offerings/bg@1x_lg.png);
     background-repeat: no-repeat;
+
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
@@ -53,19 +43,19 @@
 }
 
 .offerings__main-container {
-  position: relative;
-  z-index: 10;
   @media screen and (min-width: $tablet) {
-    // padding-top: 115px;
+    padding-top: 115px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+
   @media screen and (min-width: $desktop) {
     display: flex;
     flex-direction: row;
   }
 }
+
 .offerings__img-container {
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
     display: flex;
@@ -73,24 +63,28 @@
     align-items: baseline;
   }
 }
+
 .offerings__img-container--bottom {
   margin-bottom: 60px;
+
   @media screen and (min-width: $desktop) {
     margin-bottom: 0;
-    position: relative;
-    bottom: 30px;
   }
 }
+
 .offerings__img {
   margin: 0 auto;
+
   &--middle {
     margin-left: 29px;
     margin-right: 44px;
     margin-bottom: 67px;
   }
+
   &--small {
     margin-bottom: 68px;
   }
+
   &--middle,
   &--small {
     @media screen and (min-width: $desktop) {
@@ -105,6 +99,7 @@
       clip: rect(0 0 0 0);
       overflow: hidden;
     }
+
     @media screen and (max-width: 767px) {
       position: absolute;
       width: 1px;
@@ -124,15 +119,16 @@
   display: flex;
   flex-direction: column;
   gap: 28px;
+
   @media screen and (min-width: $tablet) {
     gap: 0;
   }
+
   @media screen and (min-width: $desktop) {
     max-width: 573px;
     gap: 0;
     margin-left: 90px;
-    padding-top: 50px;
-    // justify-content: center;
+    justify-content: center;
   }
 }
 
@@ -145,6 +141,7 @@
     font-size: 42px;
   }
 }
+
 .offerings__subline {
   @extend %paragraph;
 }
@@ -155,15 +152,18 @@
   display: flex;
   flex-direction: column;
   gap: 28px;
+
   @media screen and (min-width: $tablet) {
     margin-top: 40px;
     flex-direction: row;
     gap: 116px;
   }
+
   @media screen and (min-width: $desktop) {
     gap: 67px;
   }
 }
+
 .offerings__item::before {
   margin-bottom: 10px;
   display: block;
@@ -177,6 +177,7 @@
   border-radius: 50%;
   background-color: #ffffff;
 }
+
 .offerings__item--two::before {
   display: block;
   content: '';
@@ -189,13 +190,16 @@
   border-radius: 50%;
   background-color: #ffffff;
 }
+
 .offerings__headline-text-item {
   font-size: 18px;
   line-height: calc(21 / 18);
 }
+
 .offerings__headline-text-item--bottom {
   margin-bottom: 16px;
 }
+
 .offerings__subline-text-item {
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -204,37 +208,91 @@
 // offerings bottom part
 .offerings__bottom-part {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 24px;
+
   @media screen and (min-width: $tablet) {
     margin-top: 40px;
   }
+
   @media screen and (min-width: $desktop) {
     margin-top: 32px;
   }
 }
-.offerings__link-bottom {
-  @extend %link;
+
+// offerings read more*********************
+.offerings__input {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  &:checked ~ .offerings__text-opacity {
+    display: block;
+  }
+  &:checked ~ .offerings__button .offerings__button-uncheck {
+    display: none;
+  }
+  &:checked ~ .offerings__button .offerings__button-check {
+    display: flex;
+  }
+  &:checked ~ .offerings__button {
+    color: transparent;
+  }
+}
+.offerings__text-opacity {
+  display: none;
+}
+
+.offerings__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  font-size: 14px;
+  line-height: calc(20 / 14);
+  color: $black;
+  user-select: none;
+  cursor: pointer;
+  transition: color $time-cubic;
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+.offerings__button-check {
+  display: none;
+  font-size: 14px;
+  line-height: calc(20 / 14);
+  color: $black;
+}
+.offerings__button-uncheck {
   display: flex;
   gap: 4px;
   align-items: center;
   font-size: 14px;
   line-height: calc(20 / 14);
   color: $black;
-  @media screen and (min-width: $desktop) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
 }
 .offerings__link-svg {
+  padding-top: 3px;
   width: 14px;
   height: 14px;
   fill: currentColor;
 }
+// .offerings__input:checked ~ .offerings__text-opacity {
+//   display: block;
+// }
+// .offerings__input:checked ~ .offerings__button .offerings__button-uncheck {
+//   display: none;
+// }
+// .offerings__input:checked ~ .offerings__button .offerings__button-check {
+//   display: flex;
+// }

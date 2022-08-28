@@ -1,95 +1,144 @@
-.favorites{
-    &__section{
-        padding-top: 60px;
-        padding-bottom: 60px;
+.favorites {
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-        @media screen and (min-width:768px) {
-        padding-top: 100px;
-        padding-bottom: 100px; 
-    }
-    }
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+.favorites__title {
+  @extend %title;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 
-    &__title{
-    @extend %title;
-    text-align: center;
-    }
-
+  @media screen and (max-width: 767.9px) {
+    max-width: 160px;
+  }
 }
 
-.favorites__text{
-    text-align: center;
-    @extend %paragraph;
-    margin-bottom: 60px;
-    
-    @media screen and (min-width: 1280px) {
-        margin-bottom: 40px;
-    }
+.favorites__text {
+  @extend %paragraph;
+  text-align: center;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 767.9px) {
+    max-width: 280px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 40px;
+  }
 }
 
-.favorites__list{
-    @extend %list;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+// //   @media screen and (min-width: 1280px) {
+// //     margin-bottom: 40px;
+// //   }
+// }
+
+.favorites__list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    gap: 32px;
+  }
+}
+
+.favorites__item {
+  /*display: inline-flex;
     align-items: center;
+    justify-content: center;*/
+  /*border: 11px solid #FFE550;
+    border-radius: 140px;*/
+  width: 250px;
+  height: 250px;
 
-    @media screen and (min-width:768px) {
-        gap: 32px;
-    }
+  @media screen and (min-width: 480px) {
+    width: 280px;
+    height: 282px;
+  }
+
+  @media screen and (min-width: 768px) {
+    /* border-width: 14px;
+        border-radius: 168px;*/
+    width: 336px;
+    height: 338px;
+    flex-basis: calc((100% - (2 - 1) * 32px) / 2);
+  }
+
+  @media screen and (min-width: 1280px) {
+    /*border-width: 16px;
+        border-radius: 198px ; */
+    width: 394px;
+    height: 396px;
+    flex-basis: calc((100% - (3 - 1) * 32px) / 3);
+  }
 }
 
-.favorites__item{ 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 11px solid #FFE550;
-    border-radius: 140px;
-    width: 250px;
-    height: 252px;
-
-    @media screen and (min-width:480px) {
-        width: 280px;
-        height: 282px;
-    }
-
-    @media screen and (min-width:768px) {
-        border: 16px solid #FFE550;
-        border-radius: 168px;
-        width: 336px;
-        height: 338px;
-        flex-basis: calc((100% - (2 - 1) * 32px) / 2);
-    }
-
-    @media screen and (min-width:1280px) {
-        border-radius: 198px ;  
-        width: 395px;
-        height: 397px;
-        flex-basis: calc((100% - (3 - 1) * 32px) / 3);
-    }
+.favorites__item--mobile {
+  @media screen and (max-width: 767.9px) {
+    display: none;
+  }
 }
 
-.favorites__item--mobile{
-    @media screen and (max-width: 767.9px) {
-        display: none;
-    }
+.favorites__item .favorites__link {
+  border: 11px solid #ffe550;
+  border-radius: 140px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  transition: border-color $time-cubic;
+
+  @media screen and (min-width: 480px) {
+    width: 280px;
+    height: 282px;
+  }
+
+  @media screen and (min-width: 768px) {
+    border-width: 14px;
+    border-radius: 168px;
+    width: 336px;
+    height: 338px;
+  }
+  @media screen and (min-width: 1280px) {
+    border-width: 16px;
+    border-radius: 198px;
+    width: 394px;
+    height: 396px;
+  }
 }
 
-.favorites__img{
-    width: 206px;
-    height: 206px;
-    @media screen and (min-width:480px) {
-        width: 224px;
-        height: 224px;
-    }
+.favorites__link:hover,
+.favorites__link:focus,
+.favorites__link:active {
+  border-color: #bbf330;
+}
 
-    @media screen and (min-width:768px) {
-        width: 268px;
-        height: 270px ;
-    }
+.favorites__img {
+  width: 206px;
+  height: 206px;
+  @media screen and (min-width: 480px) {
+    width: 224px;
+    height: 224px;
+  }
 
-    @media screen and (min-width:1280px) {
-        width: 315px;
-        height: 315px;  
-    }
+  @media screen and (min-width: 768px) {
+    width: 268px;
+    height: 270px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 315px;
+    height: 315px;
+  }
 }

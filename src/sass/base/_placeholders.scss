@@ -52,6 +52,7 @@
   @extend %link;
   line-height: calc(16 / 14);
   color: $black-nav;
+  transition: color $time-cubic, font-weight $time-cubic;
 
   @media screen and (min-width: $desktop) {
     color: $black;
@@ -59,7 +60,12 @@
 
   &:hover,
   &:focus {
+    font-weight: 500;
     color: $green-btn;
     text-decoration: underline;
+
+    @media screen and (min-width: $desktop) {
+      font-weight: 700;
+    }
   }
 }
