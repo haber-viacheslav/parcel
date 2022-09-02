@@ -3,33 +3,61 @@
   <div class="subscribe__container container">
     <div class="subscribe-img">
       <picture>
-        <source media="(min-width: 1280px)" srcset="
+        <source
+          media="(min-width: 1280px)"
+          srcset="
             ./images/subscribe/img@1x_lg.webp 1x,
             ./images/subscribe/img@2x_lg.webp 2x
-          " type="image/webp" />
-        <source media="(min-width: 1280px)" srcset="
+          "
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 1280px)"
+          srcset="
             ./images/subscribe/img@1x_lg.png 1x,
             ./images/subscribe/img@2x_lg.png 2x
-          " type="image/png" />
-        <source media="(min-width: 768px)" srcset="
+          "
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
             ./images/subscribe/img@1x_md.webp 1x,
             ./images/subscribe/img@2x_md.webp 2x
-          " type="image/webp" />
-        <source media="(min-width: 768px)" srcset="
+          "
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
             ./images/subscribe/img@1x_md.png 1x,
             ./images/subscribe/img@2x_md.png 2x
-          " type="image/png" />
+          "
+          type="image/png"
+        />
 
-        <source media="(max-width: 767px)" srcset="
+        <source
+          media="(max-width: 767px)"
+          srcset="
             ./images/subscribe/img@1x_sm.webp 1x,
             ./images/subscribe/img@2x_sm.webp 2x
-          " type="image/webp" />
-        <source media="(max-width: 767px)" srcset="
+          "
+          type="image/webp"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="
             ./images/subscribe/img@1x_sm.png 1x,
             ./images/subscribe/img@2x_sm.png 2x
-          " type="image/png" />
+          "
+          type="image/png"
+        />
 
-        <img src="./images/subscribe/img@1x_sm.png" alt="image banan" />
+        <img
+          class="animate__pulse animate__swing"
+          src="./images/subscribe/img@1x_sm.png"
+          alt="image banan"
+        />
       </picture>
     </div>
     <div class="subscribtion">
@@ -39,18 +67,34 @@
         varius enim in eros elementum tristique.
       </p>
 
-      <form class="subscribtion-form" name="signup_form" autocomplete="on" novalidate>
-        <input class="subscribtion-form__input" type="email" name="email" placeholder="Enter your email"
-          pattern="^(.+)@(\ S+)$" id="subscribtion-form__title" />
+      <form
+        class="subscribtion-form"
+        name="signup_form"
+        autocomplete="on"
+        novalidate
+      >
+        <input
+          class="subscribtion-form__input"
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          id="subscribtion-form__title"
+        />
 
         <button class="btn subscribtion-form__btn" type="submit">
           Subscribe
         </button>
         <label class="subscribtion-form__title" for="subscribtion-form__title">
           <svg class="subscribtion-form__icon" width="12" height="12">
-            <use class="subscribtion-form__error" href="./images/icons.svg#error"></use>
+            <use
+              class="subscribtion-form__error"
+              href="./images/icons.svg#error"
+            ></use>
           </svg>
-          <span class="subscribtion-form__text-error">Not a valid email address (example@email.com)</span>
+          <span class="subscribtion-form__text-error"
+            >Not a valid email address (example@email.com)</span
+          >
         </label>
       </form>
     </div>

@@ -42,6 +42,14 @@
     position: static;
     margin-bottom: 0px;
   }
+
+  // animation
+
+  &:hover,
+  &:focus {
+    animation: jello;
+    animation-duration: 1500ms;
+  }
 }
 
 .subscribtion__title {

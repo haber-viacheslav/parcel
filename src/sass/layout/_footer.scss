@@ -1,190 +1,202 @@
 .footer {
-	max-width: $desktop;
-	margin: 0 auto;
-	padding: 60px 0;
-	background-color: $white-background;
-	box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
-	background-image: url(../images/footer/bg-2@1x_sm.webp), url(../images/footer/bg-3@1x_sm-1.webp), url(../images/footer/bg-3@1x_sm.webp);
-	background-repeat: no-repeat;
-	background-position: 0 132px, bottom, top right;
-	background-size: 110px 116px, 253px 66px, 104px 259px;
+  max-width: $desktop;
+  margin: 0 auto;
+  padding: 60px 0;
+  background-color: $white-background;
+  box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+  background-image: url(../images/footer/bg-2@1x_sm.webp),
+    url(../images/footer/bg-3@1x_sm-1.webp),
+    url(../images/footer/bg-3@1x_sm.webp);
+  background-repeat: no-repeat;
+  background-position: 0 132px, bottom, top right;
+  background-size: 110px 116px, 253px 66px, 104px 259px;
 
-	@media (min-device-pixel-ratio: 2),
-	(min-resolution: 192dpi),
-	(min-resolution: 2dppx) {
-		background-image: url(../images/footer/bg-2@2x_sm.webp), url(../images/footer/bg-3@2x_sm-1.webp), url(../images/footer/bg-3@2x_sm.webp);
-	}
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url(../images/footer/bg-2@2x_sm.webp),
+      url(../images/footer/bg-3@2x_sm-1.webp),
+      url(../images/footer/bg-3@2x_sm.webp);
+  }
 
-	@media screen and (min-width: $tablet) {
-		padding: 100px 0;
-		background-image: url(../images/footer/bg-1@1x_md.webp), url(../images/footer/bg-2@1x_md.webp);
-		background-position: bottom, top right;
-		background-size: 785px 141px, 203px 365px;
+  @media screen and (min-width: $tablet) {
+    padding: 100px 0;
+    background-image: url(../images/footer/bg-1@1x_md.webp),
+      url(../images/footer/bg-2@1x_md.webp);
+    background-position: bottom, top right;
+    background-size: 785px 141px, 203px 365px;
 
-		@media (min-device-pixel-ratio: 2),
-		(min-resolution: 192dpi),
-		(min-resolution: 2dppx) {
-			background-image: url(../images/footer/bg-1@2x_md.webp), url(../images/footer/bg-2@2x_md.webp);
-		}
-	}
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/footer/bg-1@2x_md.webp),
+        url(../images/footer/bg-2@2x_md.webp);
+    }
+  }
 
-	@media screen and (min-width: $desktop) {
-		background-image: url(../images/footer/bg@1x_lg.webp);
-		background-size: 100%;
-		background-position: bottom;
+  @media screen and (min-width: $desktop) {
+    background-image: url(../images/footer/bg@1x_lg.webp);
+    background-size: 100%;
+    background-position: bottom;
 
-		@media (min-device-pixel-ratio: 2),
-		(min-resolution: 192dpi),
-		(min-resolution: 2dppx) {
-			background-image: url(../images/footer/bg@2x_lg.webp);
-		}
-	}
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/footer/bg@2x_lg.webp);
+    }
+  }
 }
 
 .footer__wrap-desktop {
-	@media screen and (min-width: $desktop) {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 80px;
-	}
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
 }
 
 .footer__wrapper {
-	display: flex;
-	gap: 81px;
-	margin-bottom: 40px;
+  display: flex;
+  gap: 81px;
+  margin-bottom: 40px;
 
-	@media screen and (min-width: $tablet) {
-		gap: 114px;
-		align-items: center;
-	}
+  @media screen and (min-width: $tablet) {
+    gap: 114px;
+    align-items: center;
+  }
 
-	@media screen and (min-width: $desktop) {
-		gap: 145px;
-		align-self: flex-start;
-		margin-bottom: 0px;
-	}
+  @media screen and (min-width: $desktop) {
+    gap: 145px;
+    align-self: flex-start;
+    margin-bottom: 0px;
+  }
 }
 
 .footer__logo {
-	align-self: flex-start
+  align-self: flex-start;
 }
 
 .footer__list {
-	@extend %list;
-	@extend %nav-list;
-	flex-direction: column;
+  @extend %list;
+  @extend %nav-list;
+  flex-direction: column;
+  gap: 20;
 
-	@media screen and (min-width: $tablet) {
-		flex-direction: row;
-	}
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    gap: 28;
+  }
 }
 
 .footer__link {
-	@extend %nav-link;
-	display: block;
+  @extend %nav-link;
+  display: block;
+
+  @media screen and (min-width: $tablet) {
+    padding: 28px 0;
+  }
 }
 
 .footer__form {
-	@media screen and (max-width: 767px) {
-		margin-bottom: 20px;
-	}
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
 
-	@media screen and (min-width: $tablet) {
-		display: flex;
-	}
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .footer-label__text {
-	margin-bottom: 12px;
-
-	font-weight: 600;
-	font-size: 14px;
-	line-height: 1.5;
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .footer-label__input {
-	width: 279px;
-	display: inline-block;
+  width: 279px;
+  display: inline-block;
 
-	@media screen and (max-width: 767px) {
-		margin-bottom: 20px;
-	}
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
 
-	@media screen and (min-width: $tablet) {
-		margin-right: 14px;
-	}
+  @media screen and (min-width: $tablet) {
+    margin-right: 14px;
+  }
 }
 
 .footer__text {
-	font-size: 10px;
-	line-height: calc(12 / 10);
+  font-size: 10px;
+  line-height: calc(12 / 10);
 
-	@media screen and (max-width: 767px) {
-		margin-bottom: 60px;
-	}
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 
-	@media screen and (max-width: 1279px) {
-		margin-bottom: 100px;
-	}
+  @media screen and (max-width: 1279px) {
+    margin-bottom: 100px;
+  }
 
-	@media screen and (min-width: $tablet) {
-		font-size: 12px;
-		line-height: calc(14 / 12);
-	}
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+  }
 }
 
 .footer__link-doc {
-	color: $green-dark;
-	font-size: 10px;
-	line-height: calc(12 / 10);
+  color: $green-dark;
+  font-size: 10px;
+  line-height: calc(12 / 10);
 
-	@media screen and (min-width: $tablet) {
-		font-size: 12px;
-		line-height: calc(14 / 12);
-	}
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+  }
 }
 
 .doc-wrap {
-	@media screen and (min-width: $tablet) {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .documents-list {
-	@extend %list;
-	display: flex;
+  @extend %list;
+  display: flex;
 
-	@media screen and (max-width: 767px) {
-		margin-bottom: 40px;
-		justify-content: space-between;
-	}
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+    justify-content: space-between;
+  }
 
-	@media screen and (min-width: $tablet) {
-		gap: 20px;
-	}
+  @media screen and (min-width: $tablet) {
+    gap: 20px;
+  }
 }
 
 .footer__description {
-	font-size: 10px;
-	line-height: calc(12 / 10);
+  font-size: 10px;
+  line-height: calc(12 / 10);
 
-	@media screen and (max-width: 767px) {
-		text-align: center;
-	}
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 
-	@media screen and (min-width: $tablet) {
-		font-size: 12px;
-		line-height: calc(14 / 12);
-	}
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+  }
 }
 
 .subscribtion-form__title--footer {
-	margin-top: 0;
+  margin-top: 0;
 }
 
 .subscribtion-form__text-error--footer {
-	margin-top: 0;
+  margin-top: 0;
 }

@@ -1,0 +1,29 @@
+/* Backdrop */
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $backdrop;
+  opacity: 1;
+  transition: opacity $time-cubic visibility $time-cubic;
+  z-index: 9999;
+  visibility: visible;
+  @media screen and (max-width: ($tablet - 0.02px)) {
+    overflow-y: scroll;
+    padding: 93px 15px;
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.1);
+  opacity: 0;
+}

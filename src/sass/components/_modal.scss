@@ -1,0 +1,158 @@
+/* Modal */
+
+.modal {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  width: 320px;
+  max-height: 449px;
+  padding: 32px 20px;
+  transition: transform $time-cubic, opacity $time-cubic;
+  background-color: $yellow;
+  box-shadow: $shadow-modal;
+  border-radius: 30px;
+  opacity: 1;
+  z-index: 500;
+
+  @media screen and (min-width: ($mobile)) {
+    max-width: 458px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: 458px;
+    max-height: 449px;
+    top: 98px;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+  }
+
+  @media screen and (min-width: $desktop) {
+    top: 129px;
+  }
+}
+
+.modal__close-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+/* Form */
+
+.modal-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 17px;
+}
+
+.modal-form__contact-head {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.modal-form__field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form__label {
+  margin-bottom: 2px;
+  margin-left: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.modal-form__input {
+  padding: 14px 12px;
+  height: 48px;
+  background: $white;
+  border: 1px solid $green-dark;
+  box-shadow: $shadow-input;
+  border-radius: 30px;
+  outline: transparent;
+  transition: border-color $time-cubic;
+
+  &:not(:placeholder-shown):required:valid,
+  &:placeholder-shown {
+    border-color: $green-dark;
+  }
+
+  &:not(:placeholder-shown):required:invalid {
+    border-color: $peach-input;
+  }
+
+  &:focus-within,
+  &:hover {
+    border-color: $green-btn-hover;
+  }
+
+  &:invalid:not(:placeholder-shown) ~ .modal-form__attention {
+    opacity: 1;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $grey-placeholder;
+  }
+
+  &:required:placeholder-shown ~ .modal-form__required {
+    opacity: 1;
+  }
+}
+
+// .modal-form__input:placeholder-shown
+//   + .modal-form__input:placeholder-shown
+//   + .modal-form__btn,
+// .modal-form__input:placeholder-shown ~ .modal-form__btn {
+//   background-color: red;
+// }
+
+// .modal-form__input:not(:placeholder-shown)
+//   + .modal-form__input:not(:placeholder-shown)
+//   ~ .modal-form__btn {
+//   background-color: green;
+// }
+
+.modal-form__attention {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-left: 12px;
+  opacity: 0;
+  transition: opacity $time-cubic;
+}
+
+.modal-form__validation {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.4;
+  color: $peach-input;
+}
+
+.modal-form__required {
+  display: flex;
+  gap: 4px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.4;
+  color: $peach-input;
+  align-items: center;
+  margin-left: 12px;
+  opacity: 0;
+  transition: opacity $time-cubic;
+}

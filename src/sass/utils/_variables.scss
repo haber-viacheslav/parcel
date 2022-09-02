@@ -3,7 +3,7 @@ $main-font: 'Roboto', sans-serif;
 
 // Text color
 
-$yellow: #ffe550; 
+$yellow: #ffe550;
 $black: #2c2c2c;
 $black-nav: #000000;
 $green-btn: #bbf330;
@@ -12,9 +12,10 @@ $green-dark: #7eb101;
 $white: #ffffff;
 $grey-placeholder: #505050;
 $peach-input: #ff705d;
+$grey-placeholder: #c4c4c4;
 
 // Background color
-
+$backdrop: rgba(94, 99, 99, 0.7);
 $white-background: #fefefe;
 
 // Border color
@@ -25,6 +26,8 @@ $border-ellipse: rgba(255, 255, 255, 0.5);
 
 // Shadows
 
+$shadow-modal: 0px 4px 4px rgba(0, 0, 0, 0.06);
+
 $shadow-inner: inset 0px -4px 6px rgba(141, 175, 56, 0.9),
   inset 0px 4px 6px rgba(141, 175, 56, 0.91);
 $shadow-footer: 0px -4px 24px rgba(105, 105, 105, 0.1);
@@ -34,6 +37,7 @@ $shadow-fruit: radial-gradient(
   #2f583f 0%,
   rgba(105, 105, 105, 0) 100%
 );
+$shadow-input: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
 
 // Flex-basis
 

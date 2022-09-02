@@ -56,11 +56,18 @@
 }
 
 .header__menu {
+  color: $green-dark;
+  transition: color $time-cubic;
+
+  &:active,
+  &:focus {
+    color: $yellow;
+  }
   @media screen and (min-width: $tablet) {
     display: none;
   }
 }
 
 .header__menu-icon {
-  fill: $green-dark;
+  fill: currentColor;
 }

@@ -15,10 +15,15 @@
   padding: 6px 18px;
   background-color: $green-btn;
   border: none;
-  transition: background-color $time-cubic;
+  transition: background-color $time-cubic, box-shadow $time-cubic,
+    transform $time-cubic;
 
+  &:active,
   &:hover,
   &:focus {
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
     background-color: $green-btn-hover;
   }
 }
@@ -29,8 +34,9 @@
   color: $black-nav;
   background-color: $white-background;
   border: 2px solid $green-dark;
-  transition: border-color $time-cubic;
-
+  transition: border-color $time-cubic, box-shadow $time-cubic,
+    transform $time-cubic;
+  &:active,
   &:hover,
   &:focus {
     border-color: $border-hover;
@@ -42,11 +48,16 @@
   padding: 10px 20px;
   background-color: $green-btn;
   border: none;
-  transition: background-color $time-cubic;
+  transition: background-color $time-cubic, box-shadow $time-cubic,
+    transform $time-cubic;
 
+  &:active,
   &:hover,
   &:focus {
     background-color: $green-btn-hover;
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
 }
 
@@ -58,11 +69,16 @@
   background-color: $white-background;
   border: 0.854167px solid $green-dark;
   border-radius: 30px;
-  transition: background-color $time-cubic;
+  transition: background-color $time-cubic, box-shadow $time-cubic,
+    transform $time-cubic;
 
+  &:active,
   &:hover,
   &:focus {
     background-color: $yellow;
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
 
   @media screen and (max-width: 767px) {
@@ -74,3 +90,55 @@
     align-self: flex-start;
   }
 }
+
+.modal__close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: $black;
+  background-color: $white;
+  box-shadow: $shadow-modal;
+  transition: color $time-cubic, outline-color $time-cubic,
+    box-shadow $time-cubic, transform $time-cubic;
+  cursor: pointer;
+  outline-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $green-btn;
+    outline-color: $green-dark;
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+}
+
+.modal-form__btn {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  min-width: 106px;
+  padding: 8px 34px;
+  color: $black;
+  background: #ffffff;
+  border: 2px solid $green-dark;
+  transition: box-shadow $time-cubic, transform $time-cubic;
+  &:hover,
+  &:focus,
+  &:active {
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+}
+
+// .modal-form__input:not(:placeholder-shown):required:valid ~ .modal-form__btn,
+// .modal-form__input:placeholder-shown ~ .modal-form__btn {
+//   border-color: $peach-input;
+// }

@@ -1,0 +1,122 @@
+<!-- Modal -->
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button type="button" class="modal__close-btn" data-modal-close>
+      <svg class="modal__close-icon" width="24" height="24">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <form class="modal-form" id="form" autocomplete="on" novalidate>
+      <strong class="modal-form__contact-head">Order Form</strong>
+      <div
+        class="modal-form__group"
+        role="group"
+        aria-labelledby="contact_head"
+        id="contact_head"
+      >
+        <label class="modal-form__field">
+          <span class="modal-form__label">Name</span>
+          <input
+            class="modal-form__input"
+            type="text"
+            name="name"
+            placeholder="Your name"
+            required
+            minlength="3"
+            maxlength="25"
+            pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+          />
+          <span class="modal-form__attention">
+            <svg class="subscribtion-form__icon" width="12" height="12">
+              <use
+                class="subscribtion-form__error"
+                href="./images/icons.svg#error"
+              ></use></svg
+            ><span class="modal-form__validation"
+              >The name must be between 3 and 25 characters</span
+            >
+          </span>
+          <span class="modal-form__required">
+            <svg class="subscribtion-form__icon" width="12" height="12">
+              <use
+                class="subscribtion-form__error"
+                href="./images/icons.svg#error"
+              ></use>
+            </svg>
+            <span class="modal-form__required-message"
+              >This field is required</span
+            >
+          </span>
+        </label>
+
+        <label class="modal-form__field">
+          <span class="modal-form__label">Phone number</span>
+          <input
+            class="modal-form__input"
+            type="tel"
+            name="tel"
+            pattern="[0-9]{10}"
+            placeholder="+38(_ _ _) _ _ _   _ _   _ _"
+            maxlength="10"
+            required
+          />
+          <span class="modal-form__attention">
+            <svg class="subscribtion-form__icon" width="12" height="12">
+              <use
+                class="subscribtion-form__error"
+                href="./images/icons.svg#error"
+              ></use></svg
+            ><span class="modal-form__validation"
+              >This phone must be in the format 099 000 00 00</span
+            >
+          </span>
+          <span class="modal-form__required">
+            <svg class="subscribtion-form__icon" width="12" height="12">
+              <use
+                class="subscribtion-form__error"
+                href="./images/icons.svg#error"
+              ></use>
+            </svg>
+            <span class="modal-form__required-message"
+              >This field is required</span
+            >
+          </span>
+        </label>
+
+        <label class="modal-form__field">
+          <span class="modal-form__label">E-mail</span>
+          <input
+            class="modal-form__input"
+            type="email"
+            name="email"
+            placeholder="example@gmail.com"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            required
+          />
+          <span class="modal-form__attention">
+            <svg class="subscribtion-form__icon" width="12" height="12">
+              <use
+                class="subscribtion-form__error"
+                href="./images/icons.svg#error"
+              ></use></svg
+            ><span class="modal-form__validation"
+              >Please enter a valid email address</span
+            >
+          </span>
+          <span class="modal-form__required">
+            <svg class="subscribtion-form__icon" width="12" height="12">
+              <use
+                class="subscribtion-form__error"
+                href="./images/icons.svg#error"
+              ></use>
+            </svg>
+            <span class="modal-form__required-message"
+              >This field is required</span
+            >
+          </span>
+        </label>
+      </div>
+      <button class="btn modal-form__btn" type="submit">Send</button>
+    </form>
+  </div>
+</div>

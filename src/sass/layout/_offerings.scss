@@ -1,44 +1,32 @@
 .offerings {
   margin: 0 auto;
-  margin-top: 420px;
   padding-top: 41px;
   padding-bottom: 60px;
-  background-image: url(../images/offerings/bg@1x_sm.png);
+  background-image: url(../images/offerings/bg-xs-1.svg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/offerings/bg@2x_sm.png);
+  @media screen and (min-width: 480px) {
+    max-width: 100%;
+    padding: 0 0 100px 0;
+    background-image: url(../images/offerings/bg-sm-1.svg);
+    background-repeat: no-repeat;
   }
 
   @media screen and (min-width: $tablet) {
-    max-width: $tablet;
+    max-width: 100%;
     margin-top: 450px;
     padding: 0 0 100px 0;
-    background-image: url(../images/offerings/bg@1x_md.png);
+    background-image: url(../images/offerings/bg-md-1.svg);
     background-repeat: no-repeat;
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/offerings/bg@2x_md.png);
-    }
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: $desktop;
+    max-width: 1920px;
     margin-top: 500px;
     padding: 171px 0 75px 0;
-    background-image: url(../images/offerings/bg@1x_lg.png);
+    background-image: url(../images/offerings/bg-lg-1.svg);
     background-repeat: no-repeat;
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/offerings/bg@2x_lg.png);
-    }
   }
 }
 
@@ -56,10 +44,10 @@
   }
 }
 
+
 .offerings__img-container {
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
     display: flex;
-    // justify-content: center;
     align-items: baseline;
   }
 }
@@ -68,6 +56,8 @@
   margin-bottom: 60px;
 
   @media screen and (min-width: $desktop) {
+    position: relative;
+    bottom: 100px;
     margin-bottom: 0;
   }
 }
@@ -82,7 +72,7 @@
   }
 
   &--small {
-    margin-bottom: 68px;
+    margin-bottom: 83px;
   }
 
   &--middle,
@@ -113,6 +103,12 @@
       overflow: hidden;
     }
   }
+
+  // ANIMATED APPLE IMG
+  &:hover,&:focus{
+    animation: rubberBand;
+      animation-duration: 1500ms;
+  }
 }
 
 .offerings__main {
@@ -128,7 +124,7 @@
     max-width: 573px;
     gap: 0;
     margin-left: 90px;
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 
@@ -137,6 +133,7 @@
   line-height: 1.2;
 
   @media screen and (min-width: $tablet) {
+    max-width: 526px;
     margin-bottom: 20px;
     font-size: 42px;
   }
@@ -144,6 +141,7 @@
 
 .offerings__subline {
   @extend %paragraph;
+  max-width: 526px;
 }
 
 // offerings list
@@ -190,7 +188,17 @@
   border-radius: 50%;
   background-color: #ffffff;
 }
-
+.offerings__item--two::before,
+.offerings__item::before {
+  transition: box-shadow $time-cubic, transform $time-cubic;
+}
+.offerings__item:hover.offerings__item::before,
+.offerings__item:focus.offerings__item::before,
+.offerings__item--two:hover.offerings__item--two::before,
+.offerings__item--two:focus.offerings__item--two::before {
+  transform: scale(1.2);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
 .offerings__headline-text-item {
   font-size: 18px;
   line-height: calc(21 / 18);
@@ -204,7 +212,12 @@
   font-size: 14px;
   line-height: calc(16 / 14);
 }
-
+.offerings__btn{
+&:hover,
+&:focus{
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}}
 // offerings bottom part
 .offerings__bottom-part {
   display: flex;
@@ -234,21 +247,30 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-  &:checked ~ .offerings__text-opacity {
+  &:checked ~ .offerings__text .offerings__text-opacity {
     display: block;
+  
   }
   &:checked ~ .offerings__button .offerings__button-uncheck {
     display: none;
   }
   &:checked ~ .offerings__button .offerings__button-check {
     display: flex;
+  
   }
   &:checked ~ .offerings__button {
     color: transparent;
   }
 }
+.offerings__text{
+  display: block;
+  @media screen and (min-width: $desktop) {
+      display: none;
+    }
+}
 .offerings__text-opacity {
   display: none;
+ 
 }
 
 .offerings__button {
@@ -287,12 +309,3 @@
   height: 14px;
   fill: currentColor;
 }
-// .offerings__input:checked ~ .offerings__text-opacity {
-//   display: block;
-// }
-// .offerings__input:checked ~ .offerings__button .offerings__button-uncheck {
-//   display: none;
-// }
-// .offerings__input:checked ~ .offerings__button .offerings__button-check {
-//   display: flex;
-// }

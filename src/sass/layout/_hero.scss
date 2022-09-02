@@ -1,10 +1,14 @@
 .hero {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   padding-top: 132px;
   padding-bottom: 50px;
+  max-width: 100%;
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 86px;
+  }
 
   @media screen and (min-width: $desktop) {
     padding-top: 86px;
@@ -22,10 +26,10 @@
 .hero__title {
   @extend %title;
   margin-bottom: 28px;
-  min-width: 280px;
+   min-width: 280px;
   @media screen and (min-width: $tablet) {
     margin-bottom: 44px;
-    width: 537px;
+    max-width: 537px;
   }
   @media screen and (min-width: $desktop) {
     min-width: 465px;
@@ -35,17 +39,18 @@
 
 .hero__descr {
   @extend %paragraph;
-  width: 285px;
+  min-width: 270px;
+  width: 100%;
   margin-bottom: 28px;
-  padding-right: 14px;
+  
 
   @media screen and (min-width: $tablet) {
-    width: 350px;
+    max-width: 350px;
     margin-bottom: 40px;
   }
 
   @media screen and (min-width: $desktop) {
-    width: 502px;
+    max-width: 503px;
   }
 }
 

@@ -17,6 +17,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
 
     <link rel="stylesheet" href="./sass/index.scss" />
     <!-- Scripts -->
@@ -25,10 +30,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script type="module" src="./index.js"></script>
   </head>
-  <body>
+  <body data-page>
     <include src="./partials/header.html"></include>
     <main>
-      <include src="./partials/mobile-menu.html"></include>
       <include src="./partials/hero.html"></include>
       <include src="./partials/offerings.html"></include>
       <include src="./partials/favorites.html"></include>
@@ -36,5 +40,6 @@
       <include src="./partials/subscribe.html"></include>
     </main>
     <include src="./partials/footer.html"></include>
+    <include src="./partials/backdrop.html"></include>
   </body>
 </html>

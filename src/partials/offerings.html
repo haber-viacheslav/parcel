@@ -4,7 +4,7 @@
     <div class="offerings__main-container">
       <!-- offerings img container -->
       <div class="offerings__img-container offerings__img-container--bottom">
-        <picture>
+        <picture class="offerings__picture-container">
           <source
             media="(min-width:1280px )"
             type="image/webp"
@@ -56,13 +56,13 @@
           />
 
           <img
-            src="./images/offerings/img-1@1x_sm.png"
+            src="./images/offerings/img-1@2x_sm.png"
             alt="apple"
-            class="offerings__img"
+            class="offerings__img animate__animated animate__rubberBand"
           />
         </picture>
 
-        <picture>
+        <picture class="offerings__picture-container">
           <source
             media="(max-width:1199px )"
             type="image/webp"
@@ -86,7 +86,9 @@
             class="offerings__img offerings__img--middle"
           />
         </picture>
-        <picture>
+        <picture
+          class="offerings__picture-container animate__animated animate__rubberBand"
+        >
           <source
             media="(max-width:1199px )"
             type="image/webp"
@@ -113,7 +115,7 @@
       </div>
       <!-- offerings main -->
       <div class="offerings__main">
-        <h1 class="offerings__title">What’s Special About Our Offerings</h1>
+        <h2 class="offerings__title">What’s Special About Our Offerings</h2>
         <p class="offerings__subline">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           varius enim in eros elementum tristique. Duis cursus, mi quis viverra
@@ -123,9 +125,6 @@
         <!-- offerings list -->
         <ul class="offerings__list">
           <li class="offerings__item">
-            <!-- <svg class="offerings__svg-list">
-            <use href="./images/icons.svg#rocket"></use>
-          </svg> -->
             <h2
               class="offerings__headline-text-item offerings__headline-text-item--bottom"
             >
@@ -137,9 +136,6 @@
             </p>
           </li>
           <li class="offerings__item offerings__item--two">
-            <!-- <svg class="offerings__svg-list">
-            <use href="./images/icons.svg#touch"></use>
-          </svg> -->
             <h2
               class="offerings__headline-text-item offerings__headline-text-item--bottom"
             >
@@ -153,7 +149,9 @@
         </ul>
         <!-- offerings bottom part -->
         <div class="offerings__bottom-part">
-          <button class="btn offerings__btn">Order Now</button>
+          <button class="btn offerings__btn" data-modal-open-offer>
+            Order Now
+          </button>
           <!-- read more -->
           <input
             class="offerings__input"
@@ -169,9 +167,11 @@
             </svg>
           </label>
 
-          <p class="offerings__text-opacity">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
+          <div class="offerings__text">
+            <p class="offerings__text-opacity">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
         </div>
       </div>
     </div>
